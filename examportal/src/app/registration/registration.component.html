@@ -1,0 +1,110 @@
+<p>registration works!</p>
+<app-navigation></app-navigation>
+<!-- <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput id="firstName" formControlName="firstName" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput id="lastName" formControlName="lastName" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput id="username" formControlName="username" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput id="email" formControlName="email" type="email">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput id="password" formControlName="password" type="password">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Confirm Password</mat-label>
+    <input matInput id="confirmPassword" formControlName="confirmPassword" type="password">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Register</button>
+</form> -->
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            required
+            [(ngModel)]="users.firstName"
+            name="firstName"
+          
+          />
+        </div>
+      <div class="form-group">
+          <label for="lastName">Last Name</label>
+            <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                required
+                [(ngModel)]="users.lastName"
+                name="lastName"
+            />
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+            <input
+                type="text"
+                class="form-control"
+                id="username"
+                required
+                [(ngModel)]="users.username"
+                name="username"
+            />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+            <input
+                type="text"
+                class="form-control"
+                id="email"
+                required
+                [(ngModel)]="users.email"
+                name="email"
+            />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                required
+                [(ngModel)]="users.password"
+                name="password"
+            />
+        </div>
+  
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+            <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                required
+                [(ngModel)]="users.confirmPassword"
+                name="confirmPassword"/>
+        </div>
+  
+        <button (click)="onSubmit()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Tutorial was submitted successfully!</h4>
+        <!-- <button class="btn btn-success" (click)="newTutorial()">Add</button> -->
+      </div>
+    </div>
+  </div>
+  
